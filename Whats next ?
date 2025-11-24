@@ -1,2 +1,4 @@
-Currently with the Network and Vehicle flow genrated, i try to generate the CSV files as followed :
-VehiclesID, Vehicles position (x,y), Vehicle (Speed) , Time (ms)
+Currently with the Network and Vehicle flow genrated with SUMO, i try to generate the CSV files as followed :
+VehiclesID, Vehicles position (x,y), Vehicle (Speed) , Time (ms
+
+Once done next step will be to generate simple calcul mentionned in the READ ME to calculate Green and Red timer with Python.
