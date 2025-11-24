@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- generated on 2025-11-20T14:07:16.464013+01:00 by Eclipse SUMO netedit 1.25.0
+<neteditConfiguration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/neteditConfiguration.xsd">
+
+    <input>
+        <sumocfg-file value="C:\Users\gasto\Documents\Fluidity\Test\Test.sumocfg"/>
+        <route-files value="C:\Users\gasto\Documents\Fluidity\Test\Test.rou.xml"/>
+        <sumo-net-file value="C:\Users\gasto\Documents\Fluidity\Test\Test.net.xml"/>
+    </input>
+
+    <output>
+        <output-file value="C:\Users\gasto\Documents\Fluidity\Test\Test.net.xml"/>
+    </output>
+
+    <processing>
+        <offset.disable-normalization value="true"/>
+    </processing>
+
+    <junctions>
+        <no-turnarounds value="true"/>
+    </junctions>
+
+    <netedit>
+        <new-network value="false"/>
+    </netedit>
+
+</neteditConfiguration>
+-->
+
+<net version="1.20" junctionCornerDetail="5" limitTurnSpeed="5.50" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/net_file.xsd">
+
+    <location netOffset="0.00,0.00" convBoundary="-900.00,100.00,100.00,200.00" origBoundary="10000000000.00,10000000000.00,-10000000000.00,-10000000000.00" projParameter="!"/>
+
+    <edge id=":int_0" function="internal">
+        <lane id=":int_0_0" index="0" speed="6.51" length="9.03" shape="-598.40,192.80 -598.05,195.25 -597.00,197.00 -595.25,198.05 -592.80,198.40"/>
+    </edge>
+    <edge id=":int_1" function="internal">
+        <lane id=":int_1_0" index="0" speed="13.89" length="15.27" shape="-608.07,198.40 -592.80,198.40"/>
+    </edge>
+
+    <edge id="E1" from="J5" to="int" priority="-1" shape="-900.00,200.00 -608.07,200.00">
+        <lane id="E1_0" index="0" speed="13.89" length="291.93" shape="-900.00,198.40 -608.07,198.40"/>
+    </edge>
+    <edge id="E2" from="int" to="J6" priority="-1" shape="-608.07,200.00 100.00,200.00">
+        <lane id="E2_0" index="0" speed="13.89" length="692.80" shape="-592.80,198.40 100.00,198.40"/>
+    </edge>
+    <edge id="E3" from="J7" to="int" priority="-1" shape="-600.00,100.00 -600.00,200.00">
+        <lane id="E3_0" index="0" speed="13.89" length="92.80" shape="-598.40,100.00 -598.40,192.80"/>
+    </edge>
+
+    <tlLogic id="clusterJ10_clusterJ8_J9" type="static" programID="0" offset="0">
+        <phase duration="10" state="Gr"/>
+        <phase duration="3"  state="yr"/>
+        <phase duration="10" state="rG"/>
+        <phase duration="3"  state="ry"/>
+    </tlLogic>
+
+    <junction id="J5" type="dead_end" x="-900.00" y="200.00" incLanes="" intLanes="" shape="-900.00,200.00 -900.00,196.80"/>
+    <junction id="J6" type="dead_end" x="100.00" y="200.00" incLanes="E2_0" intLanes="" shape="100.00,196.80 100.00,200.00"/>
+    <junction id="J7" type="dead_end" x="-600.00" y="100.00" incLanes="" intLanes="" shape="-600.00,100.00 -596.80,100.00"/>
+    <junction id="int" type="traffic_light" x="-602.02" y="200.00" incLanes="E3_0 E1_0" intLanes=":int_0_0 :int_1_0" shape="-592.80,200.00 -592.80,196.80 -595.02,196.36 -595.80,195.80 -596.36,195.02 -596.69,194.02 -596.80,192.80 -600.00,192.80 -600.90,195.02 -602.02,195.80 -603.59,196.36 -605.60,196.69 -608.07,196.80 -608.07,200.00">
+        <request index="0" response="00" foes="10" cont="0"/>
+        <request index="1" response="01" foes="01" cont="0"/>
+    </junction>
+
+    <connection from="E1" to="E2" fromLane="0" toLane="0" via=":int_1_0" tl="clusterJ10_clusterJ8_J9" linkIndex="1" dir="s" state="o"/>
+    <connection from="E3" to="E2" fromLane="0" toLane="0" via=":int_0_0" tl="clusterJ10_clusterJ8_J9" linkIndex="0" dir="r" state="O"/>
+
+    <connection from=":int_0" to="E2" fromLane="0" toLane="0" dir="r" state="M"/>
+    <connection from=":int_1" to="E2" fromLane="0" toLane="0" dir="s" state="M"/>
+
+</net>
