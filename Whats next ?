@@ -1,6 +1,6 @@
 Currently with the Network and Vehicle flow genrated with SUMO, i try to generate the CSV files as followed :
-VehiclesID, Vehicles position (x,y), Vehicle (Speed) , Time (ms)
+t (s),acceleration (m/s^2),veh_id,position_x (m),position_y (m),vitesse (m/s)
 
-Can be done with https://www.youtube.com/watch?v=bbAWNb1j1w0
+From this data I calculate 
+Ditance from the traffic light Df
 
-Once done next step will be to generate simple calcul mentionned in the READ ME to calculate Green and Red timer with Python.
