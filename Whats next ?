@@ -1,6 +1,15 @@
-Currently with the Network and Vehicle flow genrated with SUMO, i try to generate the CSV files as followed :
+Currently with the Network and Vehicle flow genrated with SUMO, i generate the CSV files as followed :
 t (s),acceleration (m/s^2),veh_id,position_x (m),position_y (m),vitesse (m/s)
+0.5 , 2.515065283088479 , f_0.0 , -94.87484934716912 , -1.6 , 0.25150652830884795
+0.6 , 2.4635040927005702 , f_0.0 , -94.82506365341122 , -1.6 , 0.497856937578905
+0.7 , 2.4512617972926067 , f_0.0 , -94.7507653416804 , -1.6 , 0.7429831173081657
+0.8 , 2.207756151969643 , f_0.0 , -94.6543894684299 , -1.6 , 0.96375873250513
+...
+From this data I calculate :
+Mean Duration of traffic light Red : MDr
+Mean Duration of traffic light Green : MDv
 
-From this data I calculate 
-Ditance from the traffic light Df
+Next step might be to make a longer simulation, maybe with less vehicles and more cahotic spawning. To strenght the models.
+Then once we got sharp estimation of Traffic light duration, we will try to forsee traffic light state
+Then from this cycles knowledge we will try to advice a speed to vehicles approaching the traffic light.
 
